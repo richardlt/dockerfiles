@@ -1,7 +1,9 @@
 FROM ubuntu:trusty
 
+MAINTAINER richard.le.terrier@gmail.com
+
 ADD ./start.sh /opt/start.sh
-ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD ./ubuntu.supervisord.conf /etc/supervisor/conf.d/ubuntu.supervisord.conf
 
 RUN apt-get update &&\
 	apt-get install -y wget curl vim ssh supervisor
