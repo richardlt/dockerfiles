@@ -1,6 +1,14 @@
 # dockerfiles
 
-docker-rmeditor
-    link: redis -> docker run  -v ...:/data --name some-redis -d redis redis-server --appendonly yes
+This project contains sources for all Docker images available at : <https://hub.docker.com/u/richardleterrier/>
 
-    start: docker run -d -p 8000:8000 --link redis:redis richardleterrier/rmeditor
+### docker-ubuntu
+
+### docker-slave
+
+### docker-rmeditor
+
+A Docker image for the project <https://github.com/sifxtreme/realtime-markdown-viewer>
+
+	docker run  -v /.../redis/data:/data --name redis -d redis redis-server --appendonly yes
+	docker run -d -p 8000:8000 --link redis:redis richardleterrier/rmeditor
