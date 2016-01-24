@@ -15,4 +15,6 @@ A Docker image for the project <https://github.com/sifxtreme/realtime-markdown-v
 
 ### docker-rancher
 
-A clone of the official Rancher image, that allow Rancher to control the host VirtualBox
+A clone of the official Rancher image, that allow Rancher to control the host VirtualBox (still not working...)
+
+	docker run -d -e SSH_HOST=ADDRESSOFYOURHOST -e SSH_USER=YOURUSERNAME -v /root/.docker:/root/.docker -v /data/rancher/ssh:/root/.ssh -v /data/rancher/mysql:/var/lib/mysql -v /data/rancher/cattle:/var/lib/cattle --restart=always -p 8080:8080 --name rancher richardleterrier/rancher

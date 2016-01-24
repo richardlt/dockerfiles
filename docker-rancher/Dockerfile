@@ -1,11 +1,13 @@
-FROM rancher/server
+FROM rancher/server:v0.56.0-rc3
 
-RUN apt-get install -y wget && \
-    echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" >> /etc/apt/sources.list.d/virtualbox.list && \
-    wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add - && \
-    apt-get update && \
-    apt-get install -y virtualbox-5.0
+MAINTAINER richard.le.terrier@gmail.com
 
+COPY ./fake-docker-machine.sh /opt/fake-docker-machine.sh
+
+RUN chmod 744 /opt/fake-docker-machine.sh && rm /usr/bin/docker-machine && ln -s /opt/fake-docker-machine.sh /usr/bin/docker-machine
+
+VOLUME ["/root/.docker"]
+VOLUME ["/root/.ssh"]
 VOLUME ["/var/lib/cattle"]
 VOLUME ["/var/lib/mysql"]
 VOLUME ["/var/log/mysql"]
