@@ -58,6 +58,13 @@ A small image based on alpine that include Rancher compose cli
 		--project-name project \
 		up -d
 
+### docker-wait-for-it
+
+A small image based on alpine that include wait-for-it script from <https://github.com/iturgeon/wait-for-it>
+
+	docker run --rm richardleterrier/wait-for-it:v1.0 \
+		wait-for-it.sh www.google.com:80	
+
 # scripts
 
 ### build
