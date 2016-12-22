@@ -65,6 +65,15 @@ A small image based on alpine that include wait-for-it script from <https://gith
 	docker run --rm richardleterrier/wait-for-it:v1.0 \
 		wait-for-it.sh www.google.com:80	
 
+### docker-github-release
+
+A small image based on alpine that include GitHub release cli from <https://github.com/aktau/github-release>
+
+	docker run --rm -e GITHUB_TOKEN=GITHUBTOKEN \
+		-v `pwd`:/usr/src/workdir \
+		richardleterrier/github-release:v0.6.2 \
+		github-release info -u richardleterrier -r dockerfiles
+
 # scripts
 
 ### build
