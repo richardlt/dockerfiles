@@ -4,7 +4,7 @@ MAINTAINER richard.le.terrier@gmail.com
 
 WORKDIR /usr/src/workdir
 
-ENV VERSION v0.12.0
+ENV VERSION v0.12.1
 
 RUN cd /usr/bin && \
     wget http://releases.rancher.com/compose/$VERSION/rancher-compose-linux-amd64-$VERSION.tar.gz && \
