@@ -4,7 +4,7 @@ MAINTAINER richard.le.terrier@gmail.com
 
 WORKDIR /usr/src/workdir
 
-RUN apk add --update openssl
+RUN apk update && apk add openssl ca-certificates
 
 ENV VERSION v0.6.2
 
