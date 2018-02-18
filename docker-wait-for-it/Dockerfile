@@ -1,7 +1,5 @@
 FROM alpine:3.4
 
-MAINTAINER richard.le.terrier@gmail.com
-
 RUN apk add --update openssl bash
 
 RUN mkdir -p /usr/bin && cd /usr/bin && \

@@ -1,7 +1,5 @@
 FROM ubuntu:trusty
 
-MAINTAINER richard.le.terrier@gmail.com
-
 ADD ./start.sh /opt/start.sh
 ADD ./ubuntu.supervisord.conf /etc/supervisor/conf.d/ubuntu.supervisord.conf
 

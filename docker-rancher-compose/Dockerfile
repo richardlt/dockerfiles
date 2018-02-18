@@ -1,7 +1,5 @@
 FROM alpine:3.4
 
-MAINTAINER richard.le.terrier@gmail.com
-
 WORKDIR /usr/src/workdir
 
 ENV VERSION v0.12.1-rc2

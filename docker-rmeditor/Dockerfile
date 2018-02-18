@@ -1,7 +1,5 @@
 FROM richardleterrier/ubuntu
 
-MAINTAINER richard.le.terrier@gmail.com
-
 ADD ./rmeditor.start.sh /opt/rmeditor.start.sh
 ADD ./rmeditor.supervisord.conf /etc/supervisor/conf.d/rmeditor.supervisord.conf
 

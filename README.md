@@ -74,6 +74,15 @@ A small image based on alpine that include GitHub release cli from <https://gith
 		richardleterrier/github-release:v0.6.2 \
 		github-release info -u richardleterrier -r dockerfiles
 
+### docker-golang-arm-usb
+
+A image based on resin/raspberry-pi-golang image with libusb-1.0 included.
+
+	docker run --rm -v `pwd`:/go/src/YOUR_PROJECT_PATH \
+		-w /go/src/YOUR_PROJECT_PATH \
+		richardleterrier/golang-arm-usb:v1.9.2 \
+		go --version
+
 # scripts
 
 ### build

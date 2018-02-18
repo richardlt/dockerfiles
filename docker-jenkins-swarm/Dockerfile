@@ -1,7 +1,5 @@
 FROM richardleterrier/ubuntu
 
-MAINTAINER richard.le.terrier@gmail.com
-
 RUN mkdir -p /opt/java && \
 	cd /opt/java && \
 	wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73-linux-x64.tar.gz"
@@ -23,7 +21,7 @@ RUN mkdir -p /opt/node && \
 	wget https://nodejs.org/dist/v4.2.6/node-v4.2.6-linux-x64.tar.xz && \
 	tar -xvf node-v4.2.6-linux-x64.tar.xz
 
-env PATH $PATH:/opt/node/node-v4.2.6-linux-x64/bin
+ENV PATH $PATH:/opt/node/node-v4.2.6-linux-x64/bin
 
 RUN npm install -g bower gulp gulp-cli grunt grunt-cli
 
