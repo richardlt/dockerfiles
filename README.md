@@ -2,6 +2,10 @@
 
 This project contains sources for all Docker images available at : <https://hub.docker.com/u/richardleterrier/>
 
+### docker-debpacker
+
+A docker image that contains debpacker tool from <https://github.com/ovh/cds> project.
+
 ### docker-xgo
 
 A docker image to cross-compile Golang project based on <https://github.com/karalabe/xgo> image with more tools.
