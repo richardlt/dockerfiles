@@ -97,8 +97,9 @@ A image based on resin/raspberry-pi-golang image with libusb-1.0 included.
 
 ### build
 
-	./build.sh nameofthedockerimage (ex: rancher, ubuntu...)
+	./build.sh <image> (ex: rancher, ubuntu...)
 
 ### push
 
-	USERNAME=YOURDOCKERHUBUSERNAME PASSWORD=YOURDOCKERHUBPASSWORD EMAIL=YOURDOCKERHUBEMAIL ./push.sh nameofthedockerimage (ex: rancher, ubuntu...)
+	docker login --email <email> --password <password> --username <username>
+	REPOSITORY=<repository> ./push.sh <image> (ex: rancher, ubuntu...)
